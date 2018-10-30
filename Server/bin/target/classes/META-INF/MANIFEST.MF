@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: ivelisesolafernandez
+Build-Jdk: 10.0.2
+Implementation-Title: pm
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.project-manager
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/pm
+Created-By: Maven Integration for Eclipse
+
