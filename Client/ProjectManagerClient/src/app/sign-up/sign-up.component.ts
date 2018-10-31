@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { ActivatedRoute, Router } from '@angular/router';
+//import { Subscription } from 'rxjs';
+//import { ActivatedRoute, Router } from '@angular/router';
 import { MyAppService } from '../shared/my-app.service';
-import { NgForm } from '@angular/forms';
+//import { NgForm } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-sign-up',
@@ -11,23 +13,28 @@ import { NgForm } from '@angular/forms';
 })
 export class SignUpComponent implements OnInit {
 
-  sub: Subscription;
-  user : any = {};
+  //sub: Subscription;
+  //user : any = {};
 
-  constructor(private route: ActivatedRoute,
-              private router: Router,
-              private myAppService: MyAppService) { }
+  constructor(
+              // private route: ActivatedRoute,
+              // private router: Router,
+              // private myAppService: MyAppService
+            
+            ) { }
 
   ngOnInit() {
   }
 
-gotoMain(){
-  this.router.navigate(['/main']);
-}
+// gotoMain(){
+//   this.router.navigate(['/main']);
+// }
 
-  save(form: NgForm) {
-    this.myAppService.save(form).subscribe(result => {
-      this.gotoMain();
-    }, error => console.error(error));
-  }
+//   save(form: NgForm) {
+//     this.myAppService.save(form).subscribe(result => {
+//       this.gotoMain();
+//     }, error => console.error(error));
+//   }
+
+
 }

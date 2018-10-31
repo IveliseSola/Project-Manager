@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ProjectManagerClient';
+  
+
+  constructor ( private dialog: MatDialog ){}
+
+  openDialog() {
+    
+            const dialogConfig = new MatDialogConfig();
+    
+            dialogConfig.disableClose = true;
+            dialogConfig.autoFocus = true;
+    
+            this.dialog.open(SignUpComponent, dialogConfig);
+        }
+
 }
