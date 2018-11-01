@@ -190,8 +190,6 @@ public class Developer{
 		return yearsExperience;
 	}
 
-
-
 	public void setYearsExperience(int yearsExperience) {
 		this.yearsExperience = yearsExperience;
 	}

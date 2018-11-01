@@ -45,6 +45,7 @@ const appRoutes: Routes = [
     MatSidenavModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [SignUpComponent]
 })
 export class AppModule { }

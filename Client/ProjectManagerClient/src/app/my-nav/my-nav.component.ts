@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { MatDialog, MatDialogConfig } from '@angular/material';
+import { SignUpComponent } from '../sign-up/sign-up.component';
+
+
+export interface DialogData {
+  username: String,
+  password: String
+}
 
 @Component({
   selector: 'app-my-nav',
@@ -10,12 +15,20 @@ import { map } from 'rxjs/operators';
 })
 export class MyNavComponent {
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches)
-    );
+user: any = {}
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(public dialog: MatDialog){}
 
+  openDialog() {
+    const dialogConfig = new MatDialogConfig();
+    let dialogRef = this.dialog.open(SignUpComponent, dialogConfig);
   
+    dialogRef.afterClosed().subscribe(result => {
+      // this.user.username = result.username;
+      // this.user.password = result.password;
+      console.log(`this is the value: ${result}`);
+      
+    });
+  
+  }
 }
